@@ -69,6 +69,12 @@ PropertiesPalette_Shape::PropertiesPalette_Shape( QWidget* parent) : QWidget(par
 
 	roundRect->showValue(0);
 	stackedWidget->setCurrentIndex(0);
+
+#ifdef WANT_PIN_CUBA
+	// do not allow to use anything else than square frame
+	editShape->hide();
+	customShape->hide();
+#endif
 }
 
 void PropertiesPalette_Shape::changeEvent(QEvent *e)
