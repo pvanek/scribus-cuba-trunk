@@ -2027,6 +2027,10 @@ ScribusDoc *ScribusMainWindow::doFileNew(double width, double height, double top
 		undoManager->switchStack(tempDoc->DocName);
 		styleManager->setDoc(tempDoc);
 		tocGenerator->setDoc(tempDoc);
+#ifdef WANT_PIN_CUBA
+		// open style window after new docs is created...
+		styleManager->setPaletteShown(true);
+#endif
 	}
 	undoManager->setUndoEnabled(true);
 	return tempDoc;
