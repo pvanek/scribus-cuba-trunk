@@ -36,8 +36,6 @@ INCLUDE(CheckCXXCompilerFlag)
 INCLUDE(CheckTypeSize)
 INCLUDE(TestBigEndian)
 
-#ENABLE_TESTING()
-
 # custom build for PeopleInNeed.cz
 if (WANT_PIN_CUBA)
     add_definitions(-DWANT_PIN_CUBA)
